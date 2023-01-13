@@ -1,0 +1,34 @@
+:root {
+  --square-size: 50px;
+}
+
+.redsquare-app {
+  position: relative;
+  height: 300px;
+  background: #e0e0e0;
+  overflow: hidden;
+  transition: background-color 200ms ease-in-out, box-shadow 200ms ease-in-out;
+}
+.redsquare-app .square {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: var(--square-size);
+  width: var(--square-size);
+  background: #ccc;
+  color: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
+}
+
+.redsquare-app.is-active {
+  background: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+.redsquare-app.is-active .square {
+  background: red;
+  color: #fff;
+}
